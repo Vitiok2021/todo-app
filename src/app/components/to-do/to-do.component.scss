@@ -1,0 +1,104 @@
+.filters button.active {
+  background-color: #4caf50;
+  color: white;
+}
+.todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form-todo {
+  margin-top: 20px;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+.todo-list {
+  display: block;
+  position: relative;
+}
+.todo-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  gap: 8px;
+  padding: 6px 0;
+  cursor: grab;
+}
+.todo-item.new {
+  opacity: 0;
+  transform: translateY(-6px);
+  animation: fade-in 0.25s ease forwards;
+}
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+mat-button-toggle-group {
+  margin-top: 20px;
+}
+
+.cdk-drag-preview {
+  border-radius: 4px;
+  background: #e0e0e0;
+  padding: 6px;
+}
+
+.drag-icon {
+  cursor: grab;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0.3;
+}
+.sort-btn {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s ease;
+}
+
+.sort-icon {
+  font-size: 18px;
+  display: inline-block;
+  transition: transform 0.25s ease;
+  will-change: transform;
+}
+
+.sort-icon.rotated {
+  transform: rotate(180deg);
+}
+.todo-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.todo-item.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+  transition: opacity 0.2s ease;
+}
+.todo-item:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.cdk-drag-preview {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 6px;
+  opacity: 0.95;
+}
+.cdk-drag-placeholder {
+  opacity: 0.3;
+}

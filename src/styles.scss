@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+// @use "@angular/material" as mat;
+
+// $theme: mat.define-theme(
+//   (
+//     color: (
+//       theme-type: light,
+//     ),
+//   )
+// );
+// :root {
+//   @include mat.core();
+//   @include mat.all-component-themes($theme);
+// }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 50px 15px;
+}
+.todo-field .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+.todo-item.completed .mdc-label {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
